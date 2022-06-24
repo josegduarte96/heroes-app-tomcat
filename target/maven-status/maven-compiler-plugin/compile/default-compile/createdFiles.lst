@@ -1,0 +1,4 @@
+Model\Model.class
+Controller\HeroesApp.class
+Model\Heroe.class
+Model\ModelHC.class
