@@ -11,7 +11,7 @@
     <div class="p-3">
         <button data-bs-toggle="modal" data-bs-target="#addHero" class="btn btn-info">Agregar Heroe</button>
     </div>
-    <div class="row row-cols-2 row-cols-md-3 g-3 my-2 container-fluid h-75">        
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 g-3 my-2 container-fluid h-75">        
         <jsp:include page="vistas/heroCards.jsp" />
     </div>
         <jsp:include page="vistas/agregarHeroe.jsp" />

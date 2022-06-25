@@ -17,10 +17,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/HeroesApp">Inicio</a>
+          <a class="nav-link" aria-current="page" href="${pageContext.request.contextPath}">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/HeroesApp/heroes">App</a>
+          <a class="nav-link" href="${pageContext.request.contextPath}/heroes">App</a>
         </li>
       </ul>
     </div>
