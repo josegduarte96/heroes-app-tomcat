@@ -1,4 +1,5 @@
+Model\Conexion.class
 Model\Model.class
 Controller\HeroesApp.class
 Model\Heroe.class
-Model\ModelHC.class
+Model\ModelMySQL.class

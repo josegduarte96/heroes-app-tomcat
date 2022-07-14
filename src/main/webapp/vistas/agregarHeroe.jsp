@@ -11,20 +11,15 @@
                 <h5 class="modal-title" id="exampleModalLabel">¿Que heroe es?</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form id="formEditarHeroe" action="${pageContext.request.contextPath}/heroes?accion=add"
+            <form id="formAgregarHeroe" action="${pageContext.request.contextPath}/heroes?accion=add"
                   method="post" class="was-validated border p-4 rounded-3 bg-light">
                 <div class="modal-body">
-
-
                     <div class="row">
                         <div class="col-12 mb-3">
-                            <label for="idHeroe" class="form-label">Selecciona un heroe para agregar y completa sus campos</label>
-                            <select class="form-select idHero" name="idHeroe" placeholder="Selecciona.." required>                                                            
-                                <option value="">Seleccionar...</option>
-                                <c:forEach items="${listadoNuevosHeroes}" var="nuevoHeroe" varStatus="loop">                                    
-                                    <option value="${nuevoHeroe}">${loop.index + 1}</option>
-                                </c:forEach>
-                            </select>                            
+                            <div class="input-group mb-3">
+                                <input type="file" accept="image/*" class="form-control" id="inputFoto" name="foto">
+                                <input type="hidden" id="fotoBase64" name="fotoBase64">
+                            </div>                     
                         </div>
                         <div class="col-12 d-flex justify-content-center">                            
                             <img id="heroImg" src="" />
@@ -45,25 +40,21 @@
                             <label for="firstAp" class="form-label">Primera aparicion:</label>
                             <input type="text" class="form-control" id="firstAp" name="firstAp" placeholder="Primera aparicion" required>
                         </div>
+                        <div class="col-12 mb-3">
+                            <label for="firstAp" class="form-label">Otros Protagonistas:</label>
+                            <input type="text" class="form-control" id="characters" name="characters" placeholder="Otros protagonistas" required>
+                        </div>
                     </div>
 
 
                 </div>                    
                 <div class="modal-footer">
-                    <button class="btn btn-warning" type="submit" data-bs-dismiss="modal">Agregar</button>
+                    <button class="btn btn-warning" type="submit">Agregar</button>
                 </div>
             </form>
 
         </div>
     </div>
 </div>
-                        
-                        <script>
-                            const selectElement = document.querySelector('.idHero');
-                            const imgElement = document.querySelector('#heroImg');
-                            selectElement.addEventListener('change', e => {
-                                imgElement.src = 'assets/' + e.target.value + '.jpg';                                
-                                imgElement.height = '150'
-                            })
-                            
-                        </script>                        
+
+

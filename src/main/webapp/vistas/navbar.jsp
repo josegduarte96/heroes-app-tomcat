@@ -22,6 +22,12 @@
         <li class="nav-item">
           <a class="nav-link" href="${pageContext.request.contextPath}/heroes">App</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="${pageContext.request.contextPath}/heroes?accion=filterDc">DC Comics</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="${pageContext.request.contextPath}/heroes?accion=filterMarvel">Marvel Comics</a>
+        </li>
       </ul>
     </div>
   </div>

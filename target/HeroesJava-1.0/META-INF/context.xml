@@ -1,2 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context path="/HeroesJava"/>
+<Context path="/HeroesJava">
+    <Resource name="jdbc/heroesapp"
+              auth="Container"
+              type="javax.sql.DataSource"
+              username="root"
+              password="admin"
+              driverClassName="com.mysql.jdbc.Driver"
+              url="jdbc:mysql:/localhost:3306/heroesapp"
+              maxActive="15"
+              maxIdle="3"/>
+</Context>

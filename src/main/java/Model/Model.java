@@ -4,6 +4,7 @@
  */
 package Model;
 
+import java.io.File;
 import java.util.List;
 
 /**
@@ -22,7 +23,7 @@ public interface Model {
      * @param id el id del heroe a retornar
      * @return El heroe encontrado por ID o null si no existe
      */
-    public Heroe getHeroe(String id);
+    public Heroe getHeroe(int id);
     
     /**
      * Agrega un heroe al modelo
@@ -41,19 +42,23 @@ public interface Model {
     /**
      * Borra un heroe por ID
      * @param id el id del heroe a borrar
-     * @return La cantidad de registros modificados
+     * @return 
      */
-    public int removeHeroe(String id);
+    public void removeHeroe(int id);
+    
+    
+    
     
     /**
      * Obtiene la lista de heroes disponibles para agg a la web
      * @return La cantidad de heroes que no se han agregado
-     */
+     *
     public List<String> getListadoDisponible();
     
     /**
      * Actualiza la lista de heroes disponible para agregar
      * @param id el id del heroe que se agrego
-     */
-    public void updateListadoHeroes(String id);
+     
+    public void updateListadoHeroes(int id);
+    * */
 }
